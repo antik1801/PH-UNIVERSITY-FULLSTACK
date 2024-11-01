@@ -6,12 +6,16 @@
 
 import { ReactNode } from "react";
 import { NavLink } from "react-router-dom";
+import AdminDashboard from "../pages/admin/AdminDashboard";
+import CreateAdmin from "../pages/admin/CreateAdmin";
+import CreateFaculty from "../pages/admin/CreateFaculty";
+import CreateStudent from "../pages/admin/CreateStudent";
 
 export const adminPaths = [
     {
         name: "Dashboard",
         path:"dashboard",
-        element: 'ADMIN_DASHBOARD'
+        element: <AdminDashboard />
     },
     {
         name: "User Management",
@@ -19,17 +23,17 @@ export const adminPaths = [
             {
                 name: "Create Admin",
                 path:"create-admin",
-                element: 'CREATE_ADMIN'
+                element: <CreateAdmin />
             },
             {
                 name: "Create Faculty",
                 path:"create-faculty",
-                element: 'CREATE_FACULTY'
+                element: <CreateFaculty />
             },
             {
                 name: "Create Student",
                 path: "create-student",
-                element: 'CREATE_STUDENT'
+                element: <CreateStudent />
             }
         ]
     },
@@ -38,7 +42,7 @@ export const adminPaths = [
 
 type TRoute = {
     path: string;
-    element: string; 
+    element: ReactNode;
 }
 
 export const adminRoutes = adminPaths.reduce((acc: TRoute[], item) =>{
