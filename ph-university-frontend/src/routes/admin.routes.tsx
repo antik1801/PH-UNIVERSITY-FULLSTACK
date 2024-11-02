@@ -34,38 +34,44 @@ export const adminPaths = [
                 name: "Create Student",
                 path: "create-student",
                 element: <CreateStudent />
-            }
+            },
+            {
+                name: "Create Member",
+                path: "create-member",
+                element: <CreateStudent />
+            },
+
         ]
     },
     
 ]
 
-type TRoute = {
-    path: string;
-    element: ReactNode;
-}
+// type TRoute = {
+//     path: string;
+//     element: ReactNode;
+// }
 
-export const adminRoutes = adminPaths.reduce((acc: TRoute[], item) =>{
+// export const adminRoutes = adminPaths.reduce((acc: TRoute[], item) =>{
 
-    if(item.path && item.element)
-    {
-        acc.push({
-            path: item.path,
-            element: item.element
-        })
-    }
+//     if(item.path && item.element)
+//     {
+//         acc.push({
+//             path: item.path,
+//             element: item.element
+//         })
+//     }
 
-    if(item.children)
-    {
-        item.children.forEach((child)=>{
-            acc.push({
-                path: child.path,
-                element: child.element
-            })
-        })
-    }
-    return acc;
-},[])
+//     if(item.children)
+//     {
+//         item.children.forEach((child)=>{
+//             acc.push({
+//                 path: child.path,
+//                 element: child.element
+//             })
+//         })
+//     }
+//     return acc;
+// },[])
 
 
 // type TAdminSidebarItems={
