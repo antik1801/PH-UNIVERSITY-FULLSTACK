@@ -1,11 +1,11 @@
-import AdminDashboard from "../pages/admin/AdminDashboard";
+import FacultyDashboard from "../pages/faculty/FacultyDashboard";
 import OfferedCourse from "../pages/faculty/OfferedCourse";
 
 export const facultyPaths = [
     {
-        name: "Dashboard",
+        name: "Faculty Dashboard",
         path:"dashboard",
-        element: <AdminDashboard />
+        element: <FacultyDashboard />
     },
     {
         name: "Offered Courses",
